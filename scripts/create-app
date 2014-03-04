@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SERVER=192.168.50.10
+
+if [ $# != 1 ]; then
+  echo "Usage: $0 [TEMPLATE]"
+  exit 1
+fi
+
+TEMPLATE=$1
+
+curl -iX POST -H "Accept: application/json" -H "Content-Type: application/json" $SERVER:8080/v2/apps --data @$TEMPLATE
+echo ""

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ $# != 2 ]; then
+  echo "USAGE: $0 [APPNAME] [COUNT]"
+  exit 1
+fi
+
+SERVER=192.168.50.10
+
+APPNAME=$1
+COUNT=$2
+
+curl -iX PUT -H "Accept: application/json" -H "Content-Type: application/json" $SERVER:8080/v2/apps/$APPNAME -d "{\"instances\": $COUNT}"
+echo ""

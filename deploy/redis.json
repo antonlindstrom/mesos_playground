@@ -1,0 +1,17 @@
+{
+  "container": {
+    "image": "docker:///aooj/redis",
+    "options": [
+      "-e",
+      "EXAMPLE=true"
+    ]
+  },
+  "cpus": 0.5,
+  "executor": "/var/lib/mesos/executors/docker",
+  "id": "redis",
+  "instances": 1,
+  "mem": 256,
+  "uris": [
+    "https://raw.github.com/mesosphere/marathon/master/README.md"
+  ]
+}

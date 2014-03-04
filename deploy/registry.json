@@ -1,0 +1,14 @@
+{
+  "container": {
+    "image": "docker:///samalba/docker-registry",
+    "options": []
+  },
+  "cpus": 0.5,
+  "executor": "/var/lib/mesos/executors/docker",
+  "id": "docker-registry",
+  "instances": 1,
+  "mem": 256,
+  "uris": [
+    "https://raw.github.com/mesosphere/marathon/master/README.md"
+  ]
+}
